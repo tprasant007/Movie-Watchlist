@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    overflow-y: scroll;
+    background-color: #f0f0f0;
+}
+
+header{
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("resources/header_img_medium.jpg");
+    background-size: cover;
+    background-position: 0 25%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    color: #fff;
+    padding: 70px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+header a:hover{
+    color: goldenrod;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3.4em;
+}
+h2{
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#search-form {
+    display: flex;
+    width: 55%;
+    height: 55px;
+    justify-content: space-between;
+    position: absolute;
+    top: 10.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+#search-form img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 2.2em;
+    top: 0.7em;}
+
+
+
+input#movies-text{
+    flex-grow: 10;
+    border: none;
+    border: 1px solid #D1D5DB;
+    border-top-left-radius: 10px;   
+    border-bottom-left-radius: 10px;   
+    font-size: 20px;
+    padding-left: 2em;
+}
+
+#search-button{
+    width: 180px;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #D1D5DB;
+    border-top-right-radius: 10px;   
+    border-bottom-right-radius: 10px;   
+    font-size: 20px;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.movies-container-empty{
+    margin-top: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 40vh; 
+}
+
+.movies-container-empty img{
+    width: 50%;
+    height: 25%;
+    margin-bottom: 20px;
+}
+    
+.movies-container-empty p {
+    color: #828181;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.movies-container{
+    width: 80%;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.movie-details{
+    display: flex;
+    border-bottom: 1px solid #DFDDDD;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.movie-poster{
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 1.5em;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info h3{
+    font-size: 2.7rem;
+    
+}
+
+.movie-info span{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.movie-info img{
+    margin-right: 4px;
+}
+
+.movie-info div{
+    display: flex;
+    margin: 15px 0;
+}
+
+.movie-info div p{
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.movie-info div p:last-of-type{
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.plot{
+    font-size: 1.8rem;
+    color: #6B7280;
+    letter-spacing: 0.7px;
+}
+
+.watchlist-container-empty{
+    width: 80%;
+    margin: 10em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.watchlist-container-empty p{
+    font-size: 24px;
+    color: #828181;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+
+.watchlist-container-empty a{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 500px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        height: 30vh;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    header h1{
+        font-size: 30px;
+    }
+    main{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #search-form {
+        display: flex;
+        justify-content: space-between;
+        position: static;
+        transform: none;
+    }
+    #search-button{
+        padding: 10px;
+    }
+    .movies-container-empty{
+        margin-top: 10px;
+    }
+    .movies-container-empty img{
+        width: 90px;
+    }
+
+    .movies-container{
+        width: 100vw;
+        margin-top: 10px;
+    }
+
+    .movie-details{
+        padding: 10px;
+    }
+    .movie-poster{
+        width: 25%;
+        height: 100px;
+        margin-right: 10px;
+    }
+    .movie-info h3{
+        font-size: 2rem;
+        
+    }
+    .movie-info div p{
+        font-size: 12px;
+    }
+    .watchlist-button {
+       display: flex;
+    }
+    .plot{
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+}
